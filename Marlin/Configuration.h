@@ -609,9 +609,9 @@
     69.41, 69.41        \
   }
 #else
-#define DEFAULT_Kp 26.27
-#define DEFAULT_Ki 2.49
-#define DEFAULT_Kd 69.41
+#define DEFAULT_Kp 24.67
+#define DEFAULT_Ki 1.94
+#define DEFAULT_Kd 78.52
 #endif
 #endif // PIDTEMP
 
@@ -1197,7 +1197,7 @@
  */
 #define NOZZLE_TO_PROBE_OFFSET \
   {                            \
-    0, 18, -1.5                \
+    0, 18, -3.25               \
   }
 
 // Most probes should stay away from the edges of the bed, but
@@ -1388,8 +1388,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 240
-#define Y_BED_SIZE 240
+#define X_BED_SIZE 235
+#define Y_BED_SIZE 235
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -12
@@ -1555,7 +1555,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -1622,7 +1622,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
 // Set the number of grid points per dimension.
-#define GRID_MAX_POINTS_X 3
+#define GRID_MAX_POINTS_X 5
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 // Probe along the Y axis, advancing X after each column
@@ -1884,8 +1884,8 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL "PLA"
-#define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED 70
+#define PREHEAT_1_TEMP_HOTEND 220
+#define PREHEAT_1_TEMP_BED 45
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED 255 // Value from 0 to 255
 
